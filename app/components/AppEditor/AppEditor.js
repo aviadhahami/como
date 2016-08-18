@@ -3,12 +3,12 @@
  */
 'use strict';
 
-let AppEditorController = function(){
-	alert(2);
+function AppEditorController(){
+	alert(233);
 };
 
 angular.module('comoApp').component('appEditor', {
-	templateUrl: 'AppEditor.html',
+	templateUrl: './AppEditor.html',
 	controller: AppEditorController,
 	bindings: {
 	}
