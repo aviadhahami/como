@@ -2,6 +2,17 @@
 .navbar{
     margin-bottom: 0!important;
 }
+#brand{
+    margin-top: 5px;
+    float:left;
+    width: 159px;
+    height: 37px;
+    background-image: url("http://static-content.como.com/comowebsite/2016/01/11142201/logo-sprite-como-1.png");
+}
+#pageTitle{
+    color:whitesmoke;
+    text-align: center;
+}
 
 
 
