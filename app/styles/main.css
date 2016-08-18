@@ -2,6 +2,9 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 
 /*CUSTOM STYLE*/
+.width-100{
+    width:100%
+}
 .navbar{
     margin-bottom: 0!important;
 }
@@ -20,7 +23,7 @@
     font-weight: 200;
 }
 #pageCreator{
-    font-size: 20px;
+    font-size: 16px;
     float: right;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
