@@ -1,6 +1,14 @@
 /*FONT REQ*/
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 
+/*DOM bound css*/
+body, html {
+    height:100%;
+}
+.height-100{
+    height:100%;
+}
+
 /*CUSTOM STYLE*/
 .width-100{
     width:100%
