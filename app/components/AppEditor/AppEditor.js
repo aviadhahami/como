@@ -12,6 +12,6 @@ angular.module('comoApp').component('appEditor', {
 	controller: AppEditorController,
 	controllerAs:'compCtrl',
 	bindings: {
-		data:'<', // One way binding
+	
 	}
 });
