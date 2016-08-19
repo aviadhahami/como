@@ -4,12 +4,14 @@
 'use strict';
 
 function AppEditorController(){
-	alert(233);
-};
+	console.log(this);
+}
 
 angular.module('comoApp').component('appEditor', {
-	templateUrl: './AppEditor.html',
+	templateUrl: './../../components/AppEditor/AppEditor.html',
 	controller: AppEditorController,
+	controllerAs:'compCtrl',
 	bindings: {
+		data:'<', // One way binding
 	}
 });

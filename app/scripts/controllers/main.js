@@ -9,9 +9,5 @@
  */
 angular.module('comoApp')
   .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  	this.dummy = {name:'aviad'}
   });
