@@ -49,7 +49,7 @@ module.exports = function (grunt) {
 				tasks: ['newer:jshint:test', 'newer:jscs:test', 'karma']
 			},
 			styles: {
-				files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
+				files: ['<%= yeoman.app %>/styles/{,*/}*.css,<%= yeoman.app %>/styles/{,*/}*.min.css'],
 				tasks: ['newer:copy:styles', 'postcss']
 			},
 			gruntfile: {
@@ -60,7 +60,7 @@ module.exports = function (grunt) {
 					livereload: '<%= connect.options.livereload %>'
 				},
 				files: [
-					'<%= yeoman.app %>/components/*.html',
+					'<%= yeoman.app %>/components/*/*.html',
 					'<%= yeoman.app %>/{,*/}*.html',
 					'.tmp/styles/{,*/}*.css',
 					'<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -232,6 +232,7 @@ module.exports = function (grunt) {
 					'<%= yeoman.dist %>/scripts/{,*/}*.js',
 					'<%= yeoman.app %>/components/{,*/}*.js',
 					'<%= yeoman.dist %>/styles/{,*/}*.css',
+					'<%= yeoman.dist %>/styles/{,*/}*.min.css',
 					'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
 					'<%= yeoman.dist %>/styles/fonts/*'
 				]
@@ -260,7 +261,7 @@ module.exports = function (grunt) {
 		// Performs rewrites based on filerev and the useminPrepare configuration
 		usemin: {
 			html: ['<%= yeoman.dist %>/{,*/}*.html','<%= yeoman.dist %>/components/*.html'],
-			css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+			css: ['<%= yeoman.dist %>/styles/{,*/}*.css','<%= yeoman.dist %>/styles/{,*/}*.min.css'],
 			js: ['<%= yeoman.dist %>/scripts/{,*/}*.js','<%= yeoman.app %>/components/{,*/}*.js'],
 			options: {
 				assetsDirs: [
