@@ -1,16 +1,20 @@
 <!--controller as main-->
 <div class="row max-width margin-auto">
     <div class="col-md-6 " style="background-color: yellow;">
-        <button ng-click="main.toggleScreen('about');">
-            About Us
-        </button>
-        <button ng-click="main.toggleScreen('images');">
-            Images
-        </button>
-        <button ng-click="main.toggleScreen('hours');">
-            Opening Hours
-        </button>
-        <app-editor data="main.data"/>
+        <div class="control-panel">
+            <button ng-click="main.toggleScreen('about');">
+                About Us
+            </button>
+            <button ng-click="main.toggleScreen('images');">
+                Images
+            </button>
+            <button ng-click="main.toggleScreen('hours');">
+                Opening Hours
+            </button>
+        </div>
+        <div class="app-editor-container">
+            <app-editor screen="main.currentScreen" data="main.data"/>
+        </div>
     </div>
     <div class="col-md-6 ">
         <device-preview screen="main.currentScreen" data="main.data"/>

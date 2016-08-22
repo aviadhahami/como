@@ -10,7 +10,7 @@
                 <div class="screen-title">
                     <p>About Us</p>
                 </div>
-                <div class="screen-content" style="color:black">
+                <div class="screen-content">
                     name: {{compCtrl.data.name}}
                     <br>
                     description: {{compCtrl.data.description}}
@@ -18,13 +18,30 @@
                     website: {{compCtrl.data.websiteURL}}
                 </div>
             </div>
-            <div ng-if="compCtrl.screen == 'IMAGES'" id="imagesScreen">
-
+            <div ng-if="compCtrl.screen == 'IMAGES'" id="imagesScreen" class="device-screen">
+                <div class="screen-title">
+                    <p>Images</p>
+                </div>
+                <div class="screen-content">
+                    name: {{compCtrl.data.name}}
+                    <br>
+                    description: {{compCtrl.data.description}}
+                    <br>
+                    website: {{compCtrl.data.websiteURL}}
+                </div>
             </div>
-            <div ng-if="compCtrl.screen == 'HOURS'" id="hoursScreen">
-
+            <div ng-if="compCtrl.screen == 'HOURS'" id="hoursScreen" class="device-screen">
+                <div class="screen-title">
+                    <p>Opening Hours</p>
+                </div>
+                <div class="screen-content">
+                    name: {{compCtrl.data.name}}
+                    <br>
+                    description: {{compCtrl.data.description}}
+                    <br>
+                    website: {{compCtrl.data.websiteURL}}
+                </div>
             </div>
-            <!-- Content goes here -->
         </div>
     </div>
 </div>

@@ -4,7 +4,6 @@
 'use strict';
 
 function DevicePreviewController(){
-	console.log(this);
 	
 }
 

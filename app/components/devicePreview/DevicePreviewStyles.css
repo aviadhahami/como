@@ -15,5 +15,8 @@
     font-weight: 200;
     font-size: x-large;
 }
+.screen-content{
+    color: rgba(0,0,0,0.8);
+}
 #aboutScreen, #hoursScreen, #imagesScreen{
 }

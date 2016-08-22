@@ -5,6 +5,7 @@
 
 function AppEditorController(){
 	console.log(this);
+	let data = this.data;
 }
 
 angular.module('comoApp').component('appEditor', {
@@ -12,6 +13,7 @@ angular.module('comoApp').component('appEditor', {
 	controller: AppEditorController,
 	controllerAs:'compCtrl',
 	bindings: {
-	
+		data: '=', // Two way binding
+		screen: '<' // One way
 	}
 });
