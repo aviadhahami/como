@@ -49,7 +49,7 @@ module.exports = function (grunt) {
 				tasks: ['newer:jshint:test', 'newer:jscs:test', 'karma']
 			},
 			styles: {
-				files: ['<%= yeoman.app %>/styles/{,*/}*.css,<%= yeoman.app %>/styles/{,*/}*.min.css'],
+				files: ['<%= yeoman.app %>/styles/{,*/}*.css,<%= yeoman.app %>/styles/{,*/}*.min.css','<%= yeoman.app %>/components/*/*.css'],
 				tasks: ['newer:copy:styles', 'postcss']
 			},
 			gruntfile: {
@@ -61,6 +61,7 @@ module.exports = function (grunt) {
 				},
 				files: [
 					'<%= yeoman.app %>/components/*/*.html',
+					'<%= yeoman.app %>/components/*/*.css',
 					'<%= yeoman.app %>/{,*/}*.html',
 					'.tmp/styles/{,*/}*.css',
 					'<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
