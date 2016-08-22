@@ -1,6 +1,20 @@
 <div>
     <div class="editor" ng-if="compCtrl.screen == 'ABOUT'">
-        about
+        <div class="editor-title">
+            ABOUT
+        </div>
+        <div class="editor-content">
+            <div class="row">
+                Name: <input type="text" placeholder="name" ng-model="compCtrl.data.name">
+            </div>
+            <div class="row">
+                Description:
+                <textarea placeholder="description" ng-model="compCtrl.data.description"></textarea>
+            </div>
+            <div class="row">
+                Website URL: <input type="text" placeholder="http://my-site.somewhere" ng-model="compCtrl.data.websiteURL">
+            </div>
+        </div>
     </div>
     <div class="editor" ng-if="compCtrl.screen == 'IMAGES'">
         images

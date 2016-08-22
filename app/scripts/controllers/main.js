@@ -16,9 +16,7 @@ angular.module('comoApp')
 	.controller('MainCtrl', function () {
 		this.currentScreen = SCREEN_ENUM.ABOUT;
 		
-		this.data = {name:'aviad',
-		description:'dummy',
-		websiteURL:'dummy'};
+		this.data = {};
 		
 		this.toggleScreen = function(screen){
 			let capsScreen = screen.toUpperCase();
