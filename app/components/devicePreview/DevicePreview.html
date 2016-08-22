@@ -7,7 +7,16 @@
         <div class="camera"></div>
         <div class="screen">
             <div ng-if="compCtrl.screen == 'ABOUT'" id="aboutScreen" class="device-screen">
-                About screen
+                <div class="screen-title">
+                    <p>About Us</p>
+                </div>
+                <div class="screen-content" style="color:black">
+                    name: {{main.name}}
+                    <br>
+                    description: {{main.description}}
+                    <br>
+                    website: {{main.websiteURL}}
+                </div>
             </div>
             <div ng-if="compCtrl.screen == 'IMAGES'" id="imagesScreen">
 

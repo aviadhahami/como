@@ -1,4 +1,19 @@
 .device-screen{
     height: 100%;
+    background-color: rgba(255,255,255,0.95);
+}
+.screen-title{
     background-color: #00b3ee;
+    width:100%;
+    height:10%;
+    text-align: center;
+    line-height: 2.3;
+    box-shadow: 0px 1px 2px 0px #888888;
+}
+.screen-title p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: x-large;
+}
+#aboutScreen, #hoursScreen, #imagesScreen{
 }
