@@ -11,11 +11,11 @@
                     <p>About Us</p>
                 </div>
                 <div class="screen-content" style="color:black">
-                    name: {{main.name}}
+                    name: {{compCtrl.data.name}}
                     <br>
-                    description: {{main.description}}
+                    description: {{compCtrl.data.description}}
                     <br>
-                    website: {{main.websiteURL}}
+                    website: {{compCtrl.data.websiteURL}}
                 </div>
             </div>
             <div ng-if="compCtrl.screen == 'IMAGES'" id="imagesScreen">

@@ -5,6 +5,7 @@
 
 function DevicePreviewController(){
 	console.log(this);
+	
 }
 
 angular.module('comoApp').component('devicePreview', {
@@ -13,5 +14,6 @@ angular.module('comoApp').component('devicePreview', {
 	controllerAs:'compCtrl',
 	bindings: {
 		screen:'<', // One way binding
+		data:'<'
 	}
 });

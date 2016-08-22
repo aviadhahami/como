@@ -10,9 +10,9 @@
         <button ng-click="main.toggleScreen('hours');">
             Opening Hours
         </button>
-        <app-editor/>
+        <app-editor data="main.data"/>
     </div>
     <div class="col-md-6 ">
-        <device-preview screen="main.currentScreen"/>
+        <device-preview screen="main.currentScreen" data="main.data"/>
     </div>
 </div>
