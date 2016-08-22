@@ -16,4 +16,11 @@ angular.module('comoApp')
 	.controller('MainCtrl', function () {
 		this.currentScreen = SCREEN_ENUM.ABOUT;
 		
+		this.toggleScreen = function(screen){
+			let capsScreen = screen.toUpperCase();
+			if(SCREEN_ENUM.hasOwnProperty(capsScreen)){
+				this.currentScreen = SCREEN_ENUM[capsScreen];
+				console.log('screen changes');
+			}
+		};
 	});

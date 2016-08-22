@@ -6,17 +6,13 @@
         <div class="volume"></div>
         <div class="camera"></div>
         <div class="screen">
-            <div id="aboutScreen">
+            <div ng-if="compCtrl.screen == 'ABOUT'" id="aboutScreen" class="device-screen">
+                About screen
+            </div>
+            <div ng-if="compCtrl.screen == 'IMAGES'" id="imagesScreen">
 
             </div>
-            <div id="imagesScreen">
-
-            </div>
-            <div id="hoursScreen">
-
-            </div>
-            <div style="background-color: white; height: 100%;">
-                <h2 style="color:black">Ram Yarhi</h2>
+            <div ng-if="compCtrl.screen == 'HOURS'" id="hoursScreen">
 
             </div>
             <!-- Content goes here -->
