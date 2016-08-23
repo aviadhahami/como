@@ -15,22 +15,34 @@ const getByQueryURI = api.URL+'?key='+api.key+'&query=';
 const getByIdURI = api.URL+'?key='+api.key+'&id=';
 
 angular.module('comoApp')
-	.service('Pixabay', ['$http',function ($http) {
+	.service('Pixabay', ['$http','$q',function ($http,$q) {
 		return {
 			getImageByQuery: function(query){
+				if (!query) {
+					return;
+				}
 				console.log('Get by Q');
 				let cleanQuery = query.replaceAll(' ','+');
 				$http.get(getByQueryURI+cleanQuery).then( function(data){
-					let previewURL = data.previewURL;
+					let previewURL = data.hits[0].previewURL;
+					console.log(previewURL);
 					return previewURL;
 				});
 			},
 			getImageByID: function(id){
+				if (!id) {
+					return;
+				}
+				let deferred = $q.defer();
 				console.log('Get by ID');
-				$http.get(getByIdURI+id).then( function(data){
-					let previewURL = data.previewURL;
-					return previewURL;
+				$http.get(getByIdURI+id).then( function(res){
+					console.log(res);
+					deferred.resolve( res.data.hits[0].previewURL);
+				},function(err){
+					console.log(err);
+					deferred.reject(err);
 				});
+				return deferred.promise;
 			}
 		};
 	}]);

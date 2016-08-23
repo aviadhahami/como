@@ -7,12 +7,20 @@ function AppEditorController(Pixabay){
 	console.log(this);
 	let data = this.data;
 	
-	this.imgQuery = null;
-	this.imgID = null;
+	this.imgQuery = '';
+	this.imgID = '';
 	
 	let that = this;
 	this.getByID = function(){
-		data.imgURL = Pixabay.getImageByID(that.imgID);
+		console.log(that.imgID);
+		Pixabay.getImageByID(that.imgID).then(function(res){
+			console.log('from ctrl',res);
+			data.imgURL = res;
+			console.log(data);
+		},function(err){
+			console.log('from ctrl', err);
+		});
+		console.log(that.data);
 	};
 	this.getByQuery = function(){
 		data.imgURL = Pixabay.getImageByQuery(that.imgQuery);
