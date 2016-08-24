@@ -1,18 +1,30 @@
 <div>
     <div class="editor" ng-if="compCtrl.screen == 'ABOUT'">
-        <div class="editor-title">
-            ABOUT
-        </div>
         <div class="editor-content">
             <div class="row">
-                Name: <input type="text" placeholder="name" ng-model="compCtrl.data.name">
+                <div class="col-md-2">
+                    <p class="input-intro-text">Name</p>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" placeholder="name" ng-model="compCtrl.data.name">
+                </div>
             </div>
             <div class="row">
-                Description:
-                <textarea placeholder="description" ng-model="compCtrl.data.description"></textarea>
+                <div class="col-md-2">
+                    <p class="input-intro-text">Description</p>
+                </div>
+                <div class="col-md-4">
+                    <textarea placeholder="description" ng-model="compCtrl.data.description"></textarea>
+                </div>
             </div>
             <div class="row">
-                Website URL: <input type="text" placeholder="http://my-site.somewhere" ng-model="compCtrl.data.websiteURL">
+                <div class="col-md-2">
+                    <p class="input-intro-text">Website</p>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" placeholder="http://my-site.somewhere" ng-model="compCtrl.data.websiteURL">
+                </div>
+
             </div>
         </div>
     </div>

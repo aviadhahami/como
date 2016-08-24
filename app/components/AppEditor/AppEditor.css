@@ -1,0 +1,25 @@
+.editor-content{
+    margin-top: 5%;
+    padding-left: 10%;
+}
+.input-intro-text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+}
+
+textarea {
+    max-width:400px;
+    width: 400px;
+    height:auto;
+    max-height: 300px;
+
+}
+
+textarea, input{
+    outline:none;
+    border:0;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+textarea:focus, input:focus{
+    border-bottom:2px solid lightseagreen;
+}
