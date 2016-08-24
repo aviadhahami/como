@@ -71,7 +71,7 @@ function AppEditorController(Pixabay){
 	
 	// Remove empty instances etc
 	function cleanCorruptDateEntries() {
-		let cleanArray = [];
+		var cleanArray = [];
 		data.hours.forEach(function(hour){
 			if(!!hour.dayFrom && !!hour.dayTo && !!hour.hourFrom && !! hour.hourTo){
 				cleanArray.push(hour);

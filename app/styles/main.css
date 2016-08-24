@@ -1,7 +1,5 @@
 /*FONT REQ*/
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
-@import './../components/devicePreview/DevicePreviewStyles.css';
-@import './../components/AppEditor/AppEditor.css';
 
 /*DOM bound css*/
 body, html {
@@ -174,4 +172,113 @@ body {
     .jumbotron {
         border-bottom: 0;
     }
+}
+
+
+/*MERGE OF THE TWO COMPONENT FILES*/
+.editor-content{
+    margin-top: 5%;
+    padding-left: 10%;
+}
+.input-intro-text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+}
+
+textarea {
+    max-width:400px;
+    width: 400px;
+    height:auto;
+    max-height: 300px;
+
+}
+
+textarea, input{
+    outline:none;
+    border:0;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+textarea:focus, input:focus{
+    border-bottom:2px solid lightseagreen;
+}
+
+.company-name{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+}
+.company-description{
+    background-color: transparent;
+    height:800px;
+    width:300px;
+    resize: none;
+    border:0;
+}
+.company-description:active{
+    border: 0!important;
+}
+.separator{
+    width:50%;
+    text-align: center;
+}
+.error{
+    color:darkred;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size:1.2em;
+}
+
+.image-options{
+    height:400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.image-row{
+    display: flex;
+    justify-content: space-between;
+}
+.image{
+    margin:0.5%;
+    text-align: center;
+}
+.image-href{
+    cursor: pointer;
+}
+.image-href img:hover{
+    box-shadow: 0 10px 6px -6px #777;
+    border:3px solid rgba(80, 205, 255,0.8);
+}
+.day-input{
+    width:100px;
+}
+.hours-container{
+    display: flex;
+    justify-content:space-between;
+}
+.device-screen{
+    height: 100%;
+    background-color: rgba(255,255,255,0.95);
+}
+.screen-title{
+    background-color: #00b3ee;
+    width:100%;
+    height:10%;
+    text-align: center;
+    line-height: 2.3;
+    box-shadow: 0px 1px 2px 0px #888888;
+}
+.screen-title p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: x-large;
+}
+.screen-content{
+    color: rgba(0,0,0,0.8);
+}
+#aboutScreen, #hoursScreen, #imagesScreen{
+}
+.mobile-image{
+    margin-top: 20%;
+}
+.mobile-image img{
+    box-shadow: 0 10px 6px -6px #777;
 }
