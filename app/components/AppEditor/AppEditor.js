@@ -10,6 +10,7 @@ function AppEditorController(Pixabay){
 	this.imgQuery = '';
 	this.imgID = '';
 	this.errorMsg = null;
+	this.imageOptions = null;
 	var that = this;
 	var clearErrorMessage = function () {
 		that.errorMsg = null;
@@ -42,8 +43,9 @@ function AppEditorController(Pixabay){
 		}
 		Pixabay.getImageByQuery(that.imgQuery).then(function(res){
 			console.log('succ from ctrl', res);
+			that.imageOptions = res;
 		},function(err){
-			console.log('err from ctrl', err);
+			setErrorMsg(err);
 		});
 	};
 	

@@ -25,10 +25,10 @@ angular.module('comoApp')
 				var cleanQuery = query.replace(/ /gmi,'+');
 				$http.get(getByQueryURI+cleanQuery).then( function(res){
 					var hits = res.data.hits;
-					q.resolve(hits);
+					q.resolve(hits.slice(0,Math.max(hits.length-1,49))); // Return up to 50 results
 				}, function(err){
 					console.log('err',err);
-					q.reject(err);
+					q.reject('Oops, something went wrong, try again later');
 				});
 				return q.promise;
 			},
