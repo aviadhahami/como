@@ -65,6 +65,11 @@
                     <p class="error" ng-if="!!compCtrl.errorMsg">{{compCtrl.errorMsg}}</p>
                 </div>
             </div>
+            <div class="options-container" ng-if="compCtrl.imageOptions.length == 0">
+                <div class="options-title">
+                    <p>No results...</p>
+                </div>
+            </div>
             <div class="options-container" ng-if="compCtrl.imageOptions.length>0">
                 <div class="options-title">
                     <p>Please pick an image</p>
