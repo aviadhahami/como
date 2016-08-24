@@ -19,6 +19,10 @@ function AppEditorController(Pixabay){
 	};
 	this.getByID = function(){
 		clearErrorMessage();
+		if(!that.imgID){
+			setErrorMsg('Please insert legit id');
+			return;
+		}
 		data.loading = true;
 		Pixabay.getImageByID(that.imgID).then(function(res){
 			console.log('from ctrl',res);
