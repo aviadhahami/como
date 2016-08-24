@@ -37,7 +37,11 @@ angular.module('comoApp')
 				console.log('Get by ID');
 				$http.get(getByIdURI+id).then( function(res){
 					console.log(res);
-					deferred.resolve( res.data.hits[0].previewURL);
+					if(res.data.hits.length>0 && res.data.hits[0].hasOwnProperty('previewURL')){
+						deferred.resolve(res.data.hits[0].previewURL);
+					}else{
+						deferred.reject('No such ID');
+					}
 				},function(err){
 					console.log(err);
 					deferred.reject(err);

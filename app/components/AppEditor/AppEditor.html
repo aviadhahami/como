@@ -22,7 +22,12 @@
         </div>
         <div class="editor-content">
             <div class="row">
-                Picture token: <input type="text" placeholder="name" ng-model="compCtrl.imgID"> <button ng-click="compCtrl.getByID()">fetch</button>
+                <div>
+                    Picture token: <input type="number" placeholder="name" ng-model="compCtrl.imgID"> <button ng-click="compCtrl.getByID()">fetch</button>
+                </div>
+                <div>
+                    <p class="error" ng-if="!!compCtrl.errorMsg">{{compCtrl.errorMsg}}</p>
+                </div>
             </div>
             <p>or</p>
             <div class="row">

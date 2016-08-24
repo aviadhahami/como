@@ -9,20 +9,29 @@ function AppEditorController(Pixabay){
 	
 	this.imgQuery = '';
 	this.imgID = '';
-	
+	this.errorMsg = null;
 	let that = this;
+	let clearErrorMessage = function () {
+		that.errorMsg = null;
+	};
+	let setErrorMsg = function (err) {
+		that.errorMsg = err;
+	};
 	this.getByID = function(){
-		console.log(that.imgID);
+		clearErrorMessage();
+		data.loading = true;
 		Pixabay.getImageByID(that.imgID).then(function(res){
 			console.log('from ctrl',res);
 			data.imgURL = res;
-			console.log(data);
 		},function(err){
-			console.log('from ctrl', err);
+			console.log('from ctrl, err', err);
+			setErrorMsg(err);
+		}).then(function() {
+			data.loading = false;
 		});
-		console.log(that.data);
 	};
 	this.getByQuery = function(){
+		clearErrorMessage();
 		data.imgURL = Pixabay.getImageByQuery(that.imgQuery);
 	};
 	

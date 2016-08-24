@@ -22,7 +22,10 @@
                 <div class="screen-title">
                     <p>Images</p>
                 </div>
-                <div class="screen-content">
+                <div ng-if="!!compCtrl.data.loading" class="screen-content">
+                    <img src="./../../images/ajax-loader.gif" alt="">
+                </div>
+                <div class="screen-content" ng-if="!compCtrl.data.loading">
                     <div ng-if="compCtrl.data.imgURL">
                         <img ng-src="{{compCtrl.data.imgURL}}" alt="">
                     </div>
