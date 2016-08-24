@@ -62,6 +62,31 @@ body, html {
     margin: 0 !important;
     width:100%;
 }
+.control-panel{
+    display: flex;
+    justify-content: space-between;
+}
+.control-panel button{
+    border: 0px ;
+    /*border-radius: 50px;*/
+    background-color: transparent;
+    font-family: roboto;
+    font-weight: 500;
+    font-size: 2em;
+    outline:none;
+}
+.control-panel button:hover{
+    color: rgba(3, 167, 195, 0.95);
+}
+.main-container{
+    margin-top:5%;
+}
+.selected{
+    border-bottom: 2px solid rgb(44, 183, 197)!important;
+}
+.app-editor-container{
+    height:500px;
+}
 
 
 

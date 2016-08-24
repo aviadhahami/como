@@ -1,14 +1,14 @@
 <!--controller as main-->
 <div class="row max-width margin-auto">
-    <div class="col-md-6 " style="background-color: yellow;">
+    <div class="col-md-6 main-container">
         <div class="control-panel">
-            <button ng-click="main.toggleScreen('about');">
+            <button ng-click="main.toggleScreen('about');" ng-class="{selected:main.currentScreen == 'ABOUT'}">
                 About Us
             </button>
-            <button ng-click="main.toggleScreen('images');">
+            <button ng-click="main.toggleScreen('images');" ng-class="{selected:main.currentScreen == 'IMAGES'}">
                 Images
             </button>
-            <button ng-click="main.toggleScreen('hours');">
+            <button ng-click="main.toggleScreen('hours');" ng-class="{selected:main.currentScreen == 'HOURS'}">
                 Opening Hours
             </button>
         </div>
