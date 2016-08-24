@@ -47,7 +47,7 @@
                 <div class="screen-content">
                     <div class="row">
                         <div class="col-md-4" ng-repeat="hour in compCtrl.hours">
-                            {{hour.dayFrom}} {{!!hour.dayTo?' - ' + hour.dayTo: ''}} | {{hour.hourFrom}} - {{hour.hourTo}}
+                            {{hour.dayFrom}} {{hour.dayTo == hour.dayFrom? '' :hours.dayTo}} | {{hour.hourFrom}} - {{hour.hourTo}}
                         </div>
                     </div>
                 </div>

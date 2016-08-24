@@ -90,7 +90,7 @@
         <div class="editor-content">
             <p>Supply activity hours for your business</p>
         </div>
-        <div class="row hours-container">
+        <div class="row hours-container" ng-repeat="hour in compCtrl.data.hours">
             <div class="col-md-6">
                 <input class="day-input" type="text" placeholder="from">
                 -
@@ -100,6 +100,9 @@
                 -
                 <input class="day-input" type="time" placeholder="from">
             </div>
+        </div>
+        <div class="add-hours-container">
+            <button ng-click="compCtrl.addHours()">Add more hours</button>
         </div>
     </div>
 </div>

@@ -11,8 +11,8 @@ function chunk(arr, size) {
 	return newArr;
 }
 
+
 function AppEditorController(Pixabay){
-	console.log(this);
 	var data = this.data;
 	
 	this.imgQuery = '';
@@ -64,11 +64,27 @@ function AppEditorController(Pixabay){
 		});
 	};
 	this.selectImage = function (image) {
-		console.log(image);
 		that.data.loading = true;
 		that.data.imgURL = image.previewURL;
 		that.data.loading = false;
-		
+	};
+	
+	function cleanCorruptDateEntries() {
+		let cleanArray = [];
+		that.data.hours.forEach(function(hour){
+			if(!!hour.dayFrom && !!hour.dayTo && !!hour.hourFrom && !! hour.hourTo){
+				cleanArray.push(hour);
+			}
+		});
+		that.data.hours = cleanArray;
+	}
+	
+	this.addHours = function(){
+		if(!that.data.hasOwnProperty('hours')){
+			that.data.hours = [];
+		}
+		cleanCorruptDateEntries();
+		that.data.hours.push({'test':1});
 	};
 	
 }
