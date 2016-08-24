@@ -25,7 +25,6 @@ angular.module('comoApp')
 				var cleanQuery = query.replace(/ /gmi,'+');
 				console.log(getByQueryURI+cleanQuery+'&image_type=photo');
 				$http.get(getByQueryURI+cleanQuery+'&image_type=photo').then( function(res){
-				// $http.get('https://pixabay.com/api/?key=3146573-d397e7ae9edfec76d75c3fab7&q=yellow+flowers').then( function(res){
 					var hits = res.data.hits;
 					q.resolve(hits.slice(0,Math.max(hits.length-1,49))); // Return up to 50 results
 				}, function(err){

@@ -65,6 +65,20 @@
                     <p class="error" ng-if="!!compCtrl.errorMsg">{{compCtrl.errorMsg}}</p>
                 </div>
             </div>
+            <div class="options-container" ng-if="compCtrl.imageOptions.length>0">
+                <div class="options-title">
+                    <p>Please pick an image</p>
+                </div>
+                <div class="image-options">
+                    <div class="row image-row" ng-repeat="imageRow in compCtrl.imageOptions">
+                        <div class="col-md-3 image" ng-repeat="image in imageRow">
+                            <span ng-click="compCtrl.selectImage(image)" class="image-href">
+                                <img ng-src="{{image.previewURL}}" alt="">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="editor" ng-if="compCtrl.screen == 'HOURS'">

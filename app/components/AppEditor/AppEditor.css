@@ -48,3 +48,24 @@ textarea:focus, input:focus{
     font-weight: 500;
     font-size:1.2em;
 }
+
+.image-options{
+    height:400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.image-row{
+    display: flex;
+    justify-content: space-between;
+}
+.image{
+    margin:0.5%;
+    text-align: center;
+}
+.image-href{
+    cursor: pointer;
+}
+.image-href img:hover{
+    box-shadow: 0 10px 6px -6px #777;
+    border:3px solid rgba(80, 205, 255,0.8);
+}
