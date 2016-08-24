@@ -40,7 +40,11 @@ function AppEditorController(Pixabay){
 			setErrorMsg('Please insert legit query');
 			return;
 		}
-		data.imgURL = Pixabay.getImageByQuery(that.imgQuery);
+		Pixabay.getImageByQuery(that.imgQuery).then(function(res){
+			console.log('succ from ctrl', res);
+		},function(err){
+			console.log('err from ctrl', err);
+		});
 	};
 	
 }

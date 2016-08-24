@@ -21,13 +21,16 @@ angular.module('comoApp')
 				if (!query) {
 					return;
 				}
-				console.log('Get by Q');
-				var cleanQuery = query.replaceAll(' ','+');
-				$http.get(getByQueryURI+cleanQuery).then( function(data){
-					var previewURL = data.hits[0].previewURL;
-					console.log(previewURL);
-					return previewURL;
+				var q = $q.defer();
+				var cleanQuery = query.replace(/ /gmi,'+');
+				$http.get(getByQueryURI+cleanQuery).then( function(res){
+					var hits = res.data.hits;
+					q.resolve(hits);
+				}, function(err){
+					console.log('err',err);
+					q.reject(err);
 				});
+				return q.promise;
 			},
 			getImageByID: function(id){
 				if (!id) {
