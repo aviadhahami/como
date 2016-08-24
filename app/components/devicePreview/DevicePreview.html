@@ -45,11 +45,11 @@
                     <p>Opening Hours</p>
                 </div>
                 <div class="screen-content">
-                    name: {{compCtrl.data.name}}
-                    <br>
-                    description: {{compCtrl.data.description}}
-                    <br>
-                    website: {{compCtrl.data.websiteURL}}
+                    <div class="row">
+                        <div class="col-md-4" ng-repeat="hour in compCtrl.hours">
+                            {{hour.dayFrom}} {{!!hour.dayTo?' - ' + hour.dayTo: ''}} | {{hour.hourFrom}} - {{hour.hourTo}}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
