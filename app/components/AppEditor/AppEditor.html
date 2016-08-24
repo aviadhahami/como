@@ -92,13 +92,13 @@
         </div>
         <div class="row hours-container" ng-repeat="hour in compCtrl.data.hours">
             <div class="col-md-6">
-                <input class="day-input" type="text" placeholder="from">
+                <input class="day-input" type="text" placeholder="from" ng-model="hour.dayFrom">
                 -
-                <input class="day-input" type="text" placeholder="to">
+                <input class="day-input" type="text" placeholder="to" ng-model="hour.dayTo">
                 at
-                <input class="day-input" type="time" placeholder="from">
+                <input class="day-input" pattern="[0-9][0-9]:[0-9][0-9]" type="text" placeholder="from (mm:ss)" ng-model="hour.hourFrom">
                 -
-                <input class="day-input" type="time" placeholder="from">
+                <input class="day-input" pattern="[0-9][0-9]:[0-9][0-9]" type="text" placeholder="to (mm:ss)" ng-model="hour.hourTo">
             </div>
         </div>
         <div class="add-hours-container">

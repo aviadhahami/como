@@ -69,22 +69,26 @@ function AppEditorController(Pixabay){
 		that.data.loading = false;
 	};
 	
+	// Remove empty instances etc
 	function cleanCorruptDateEntries() {
 		let cleanArray = [];
-		that.data.hours.forEach(function(hour){
+		data.hours.forEach(function(hour){
 			if(!!hour.dayFrom && !!hour.dayTo && !!hour.hourFrom && !! hour.hourTo){
 				cleanArray.push(hour);
 			}
 		});
-		that.data.hours = cleanArray;
+		data.hours = cleanArray;
 	}
 	
 	this.addHours = function(){
-		if(!that.data.hasOwnProperty('hours')){
-			that.data.hours = [];
+		if(!data.hasOwnProperty('hours')){
+			data.hours = [];
 		}
+		
+		// Clean the array in requires more input slots.
 		cleanCorruptDateEntries();
-		that.data.hours.push({'test':1});
+		data.hours.push({});
+		console.log(data);
 	};
 	
 }
