@@ -20,3 +20,9 @@
 }
 #aboutScreen, #hoursScreen, #imagesScreen{
 }
+.mobile-image{
+    margin-top: 20%;
+}
+.mobile-image img{
+    box-shadow: 0 10px 6px -6px #777;
+}
