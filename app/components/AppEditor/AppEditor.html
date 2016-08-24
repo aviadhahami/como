@@ -43,9 +43,6 @@
                 <div class="col-md-1">
                     <button ng-click="compCtrl.getByID()">fetch</button>
                 </div>
-                <div>
-                    <p class="error" ng-if="!!compCtrl.errorMsg">{{compCtrl.errorMsg}}</p>
-                </div>
             </div>
             <div class="separator">
                 <p>-  OR  -</p>
@@ -60,7 +57,13 @@
                     <input class="width-100" type="text" placeholder="http://my-site.somewhere" ng-model="compCtrl.imgQuery">
                 </div>
                 <div class="col-md-1">
-                    <button ng-click="compCtrl.getByID()">fetch</button>
+                    <button ng-click="compCtrl.getByQuery()">fetch</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-3">
+                    <p class="error" ng-if="!!compCtrl.errorMsg">{{compCtrl.errorMsg}}</p>
+
                 </div>
             </div>
         </div>

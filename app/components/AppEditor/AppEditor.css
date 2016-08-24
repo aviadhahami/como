@@ -42,3 +42,9 @@ textarea:focus, input:focus{
     width:50%;
     text-align: center;
 }
+.error{
+    color:darkred;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size:1.2em;
+}

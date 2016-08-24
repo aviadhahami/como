@@ -36,6 +36,10 @@ function AppEditorController(Pixabay){
 	};
 	this.getByQuery = function(){
 		clearErrorMessage();
+		if(!that.imgQuery){
+			setErrorMsg('Please insert legit query');
+			return;
+		}
 		data.imgURL = Pixabay.getImageByQuery(that.imgQuery);
 	};
 	
