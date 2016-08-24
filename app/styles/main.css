@@ -1,5 +1,6 @@
 /*FONT REQ*/
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+@import '/app/components/devicePreview/DevicePreviewStyles.css';
 
 /*DOM bound css*/
 body, html {

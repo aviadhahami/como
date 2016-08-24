@@ -19,7 +19,7 @@ angular.module('comoApp')
 		this.data = {};
 		
 		this.toggleScreen = function(screen){
-			let capsScreen = screen.toUpperCase();
+			var capsScreen = screen.toUpperCase();
 			if(SCREEN_ENUM.hasOwnProperty(capsScreen)){
 				this.currentScreen = SCREEN_ENUM[capsScreen];
 				console.log('screen changes');

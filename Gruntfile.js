@@ -231,7 +231,6 @@ module.exports = function (grunt) {
 			dist: {
 				src: [
 					'<%= yeoman.dist %>/scripts/{,*/}*.js',
-					'<%= yeoman.app %>/components/{,*/}*.js',
 					'<%= yeoman.dist %>/styles/{,*/}*.css',
 					'<%= yeoman.dist %>/styles/{,*/}*.min.css',
 					'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
@@ -262,7 +261,7 @@ module.exports = function (grunt) {
 		// Performs rewrites based on filerev and the useminPrepare configuration
 		usemin: {
 			html: ['<%= yeoman.dist %>/{,*/}*.html','<%= yeoman.dist %>/components/*.html'],
-			css: ['<%= yeoman.dist %>/styles/{,*/}*.css','<%= yeoman.dist %>/styles/{,*/}*.min.css'],
+			css: ['<%= yeoman.dist %>/styles/{,*/}*.css','<%= yeoman.dist %>/styles/{,*/}*.min.css','<%= yeoman.dist %>/styles/components/*.css'],
 			js: ['<%= yeoman.dist %>/scripts/{,*/}*.js','<%= yeoman.app %>/components/{,*/}*.js'],
 			options: {
 				assetsDirs: [
@@ -429,7 +428,8 @@ module.exports = function (grunt) {
 				configFile: 'test/karma.conf.js',
 				singleRun: true
 			}
-		}
+		},
+		
 	});
 	
 	
