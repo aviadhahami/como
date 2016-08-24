@@ -11,11 +11,16 @@
                     <p>About Us</p>
                 </div>
                 <div class="screen-content">
-                    name: {{compCtrl.data.name}}
-                    <br>
-                    description: {{compCtrl.data.description}}
-                    <br>
-                    website: {{compCtrl.data.websiteURL}}
+                    <div>
+                        <p class="company-name">{{compCtrl.data.name || "Company name"}}</p>
+                    </div>
+                    <div>
+                        <textarea class="company-description" disabled>{{compCtrl.data.description || 'description goes here..' }}</textarea>
+
+                    </div>
+                    <div>
+                        <p>Visit us at: <a ng-href="http://{{compCtrl.data.websiteURL}}" target="_blank">{{compCtrl.data.websiteURL || 'mySite.com'}}</a></p>
+                    </div>
                 </div>
             </div>
             <div ng-if="compCtrl.screen == 'IMAGES'" id="imagesScreen" class="device-screen">
