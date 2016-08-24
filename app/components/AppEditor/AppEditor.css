@@ -38,3 +38,7 @@ textarea:focus, input:focus{
 .company-description:active{
     border: 0!important;
 }
+.separator{
+    width:50%;
+    text-align: center;
+}

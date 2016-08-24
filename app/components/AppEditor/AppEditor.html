@@ -29,21 +29,39 @@
         </div>
     </div>
     <div class="editor" ng-if="compCtrl.screen == 'IMAGES'">
-        <div class="editor-title">
-            Images
-        </div>
         <div class="editor-content">
+            <p>*you may add image to your business app. Simply supply a token or search</p>
             <div class="row">
-                <div>
-                    Picture token: <input type="number" placeholder="name" ng-model="compCtrl.imgID"> <button ng-click="compCtrl.getByID()">fetch</button>
+                <div class="col-md-2">
+                    <p class="input-intro-text">
+                        Token
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <input class="width-100" type="number" placeholder="Token" ng-model="compCtrl.imgID">
+                </div>
+                <div class="col-md-1">
+                    <button ng-click="compCtrl.getByID()">fetch</button>
                 </div>
                 <div>
                     <p class="error" ng-if="!!compCtrl.errorMsg">{{compCtrl.errorMsg}}</p>
                 </div>
             </div>
-            <p>or</p>
+            <div class="separator">
+                <p>-  OR  -</p>
+            </div>
             <div class="row">
-                search: <input type="text" placeholder="http://my-site.somewhere" ng-model="compCtrl.imgQuery">
+                <div class="col-md-2">
+                    <p class="input-intro-text">
+                        Search
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <input class="width-100" type="text" placeholder="http://my-site.somewhere" ng-model="compCtrl.imgQuery">
+                </div>
+                <div class="col-md-1">
+                    <button ng-click="compCtrl.getByID()">fetch</button>
+                </div>
             </div>
         </div>
     </div>
